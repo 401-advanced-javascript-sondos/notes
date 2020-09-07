@@ -3,15 +3,20 @@
 jest.mock('minimist');
 const minimist = require('minimist');
 minimist.mockImplementation(()=> {
-    return {
-        // a: 'Note',
-        //add:'make a note,
-    }
+    return { _: [], a: 'note' }
 });
 
 const Input = require('../lib/input.js');
 
 describe('Input Module', () => {
+
+    it('input class will work with dummy data', () => {
+        let options = new Input();
+        console.log('options',options)
+        expect(options.action).toEqual('a');
+        expect(options.payload).toEqual('note');
+      });
+
 
     it('getAdd() will default to Enter a valid action when method has no value', ()=> {
         let options = new Input();
