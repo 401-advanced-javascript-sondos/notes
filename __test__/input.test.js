@@ -36,7 +36,7 @@ describe('Input Module', () => {
 
     it('getNote() will default to Error: invalid note when method has no value', ()=> {
         let options = new Input();
-        expect(options.getNote()).toEqual('Error: invalid note');
+        expect(options.getNote()).toEqual(false);
     });
 
     it('getNote() returns my Note if valid', ()=> {
