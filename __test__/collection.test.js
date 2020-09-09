@@ -2,8 +2,8 @@
 
 require('@code-fellows/supergoose');
 
-const Note = require('../lib/model/notes-collection.js');
-const note = new Note();
+const note = require('../lib/model/notes-collection.js');
+// const note = new Note();
 // const Notes = require('../lib/notes.js');
 
 // // Spies!
@@ -48,6 +48,26 @@ describe('Notes Module', () => {
         })
     });
 
+ ///find   
+
+ it('get(id) will get data by id ', () => {
+    let data = { payload: 'Student 2', category: 'Student 2' }
+
+    return note.add(data)
+    .then(result => {
+        console.log(result)
+        return note.get()
+        .then(e => {
+            console.log(e)
+             Object.keys(data).forEach(item => {
+                expect(result[item]).toEqual(data[item]);
+            })
+        })
+
+    })
+});
+
+
 
  ///Delete   
 
@@ -72,18 +92,18 @@ describe('Notes Module', () => {
 
 //check list
 
-// it('list()',()=>{
-//     let obj={payload:'yazan',category:'cofee'};
-//     return note.add(obj)
-//       .then(result=>{
-//         return note.list(result.category)
-//           .then(item=>{
-//             Object.values(obj).forEach(value=>{
-//               expect(item[value]).toEqual(obj[value]);
-//             });
-//           });
-//       });
-//   });
+it('list()',()=>{
+    let obj={payload:'student',category:'cofee'};
+    return note.add(obj)
+      .then(result=>{
+        return note.list(result.category)
+          .then(item=>{
+            Object.values(obj).forEach(value=>{
+              expect(item[value]).toEqual(obj[value]);
+            });
+          });
+      });
+  });
 
 });
 
