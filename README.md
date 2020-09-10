@@ -27,4 +27,4 @@
 ![Notesy-v01-uml](assets/uml.jpg)
 <br><br>
 
-![Notesy-v02-uml](assets/lab4uml.jpg)
+![Notesy-v02-uml](assets/lab4uml.png)
