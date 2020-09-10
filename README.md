@@ -25,3 +25,4 @@
 #### UML
 
 ![Notesy-v01-uml](assets/uml.jpg)
+![Notesy-v01-uml](assets/lab4uml.jpg)
