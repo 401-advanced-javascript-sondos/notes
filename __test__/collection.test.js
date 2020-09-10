@@ -2,9 +2,8 @@
 
 require('@code-fellows/supergoose');
 
-const Note = require('../lib/model/notes-collection.js');
-const { object, keys } = require('underscore');
-const note = new Note();
+const note = require('../lib/model/notes-collection.js');
+// const note = new Note();
 // const Notes = require('../lib/notes.js');
 
 // // Spies!
@@ -32,13 +31,13 @@ describe('Notes Module', () => {
 
  ///find   
 
-    it('find(id) will get data by id ', () => {
+    it('get(id) will get data by id ', () => {
         let data = { payload: 'Student 2', category: 'Student 2' }
 
         return note.add(data)
         .then(result => {
             console.log(result)
-            return note.find(result._id)
+            return note.get(result._id)
             .then(e => {
                 console.log(e)
                  Object.keys(data).forEach(item => {
@@ -48,6 +47,26 @@ describe('Notes Module', () => {
 
         })
     });
+
+ ///find   
+
+ it('get(id) will get data by id ', () => {
+    let data = { payload: 'Student 2', category: 'Student 2' }
+
+    return note.add(data)
+    .then(result => {
+        console.log(result)
+        return note.get()
+        .then(e => {
+            console.log(e)
+             Object.keys(data).forEach(item => {
+                expect(result[item]).toEqual(data[item]);
+            })
+        })
+
+    })
+});
+
 
 
  ///Delete   
@@ -74,7 +93,7 @@ describe('Notes Module', () => {
 //check list
 
 it('list()',()=>{
-    let obj={payload:'yazan',category:'cofee'};
+    let obj={payload:'student',category:'cofee'};
     return note.add(obj)
       .then(result=>{
         return note.list(result.category)
@@ -111,5 +130,3 @@ it('list()',()=>{
 //           expect(item[key]).toEqual(obj[key]);
 //         });
 //       });
-
-

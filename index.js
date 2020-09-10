@@ -29,6 +29,10 @@ function help(){
         add usage:  --add <note> 
         -a add note
         --add add note
+        --up update
+        --delete for delete data
+        --list to find all data
+        --list <_id> to find data bu id
     `);
 }
 
