@@ -24,8 +24,8 @@
 
 #### UML
 
-![uml-1 ](assets/uml.jpg)
+![uml-1 ](asset/uml.jpg)
 <br><br>
 
 
-![Notesy-v02-uml](assets/lab4uml.png)
+![Notesy-v02-uml](asset/lab4uml.png)
