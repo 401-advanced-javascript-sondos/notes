@@ -24,7 +24,7 @@
 
 #### UML
 
-![Notesy-v01-uml](assets/uml.jpg)
+![uml-1 ](assets/uml.jpg)
 <br><br>
 
 
