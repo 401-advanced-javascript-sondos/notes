@@ -23,9 +23,8 @@
   - `node index.js --add/-a "note_text"`
 
 #### UML
-
-![uml-1 ](assest/uml.jpg)
+Notesy-v01-uml
+![Notesy-v01-uml ](assest/uml.jpg)
 <br><br>
-gi
-
+Notesy-v02-uml
 ![Notesy-v02-uml](assest/lab4uml.png)
